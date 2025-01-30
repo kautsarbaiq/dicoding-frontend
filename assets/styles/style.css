@@ -1,132 +1,210 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: "Quicksand", sans-serif;
-
   margin: 0;
   padding: 0;
 }
 
-h2,
-h3 {
-  color: #00a2c6;
-}
-
-footer {
-  padding: 20px;
-  color: white;
-  background-color: #00a2c6;
-
-  text-align: center;
-  font-weight: bold;
-}
-
-nav a {
-  font-size: 18px;
-
-  font-weight: 400;
-  text-decoration: none;
-
-  color: white;
-}
-
-nav a:hover {
-  font-weight: bold;
-}
-
-.profile header {
-  text-align: center;
-}
-
-.featured-image {
-  width: 100%;
-  max-height: 300px;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.profile img {
-  max-width: 200px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-
-  padding: 20px;
-}
-
-.jumbotron {
-  font-size: 20px;
-  padding: 60px;
-  background-color: #00c8eb;
-  text-align: center;
-  color: white;
-}
-
-nav ul {
-  padding-inline: 4rem;
-  display: flex;
-
-  gap: 2rem;
-}
-
-nav li {
-  list-style-type: none;
-}
-
-nav {
-  background-color: #00a2c6;
-  padding: 5px;
-
-  position: sticky;
-  top: 0;
-}
-
-main {
-  padding: 20px;
-
-  display: flex;
-  gap: 1.5rem;
-}
-
-#content {
-  flex: 5;
-
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem 2rem;
-}
-
-aside {
-  flex: 1;
-}
-
+/* Header */
 header {
   display: inline;
 }
 
-/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 40px;
+  padding: 60px;
+  height: 630px;
+  background-color: #000000;
+  text-align: center;
+  color: white;
+}
+
+.jumbotron p {
+  font-size: 60px;
+  font-family: 'cinzel';
+  animation: slideText 8s linear infinite; 
+}
+
+/*keyframes */
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%); 
+  }
+  
+  45% {
+    transform: translateX(0);
+  }
+  
+  55% {
+    transform: translateX(0); 
+  }
+  
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #000000;
+  padding: 4px;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+/* Navigation List */
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+ul{
+  justify-content: flex-star;
+}
+
+/* Navigation List Item */
+nav li {
+  list-style-type: none;
+}
+.side-nav {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+/* Navigation Links */
+nav a {
+  font-size: 19px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  padding: 6px; 
+  padding-blox: 5px;
+  border-radius: 14px;
+  padding: 5px 12px 5px 12px;
+
+}
+
+/* Navigation Hover Effect */
+nav a:hover {
+  font-weight: bold;
+  color:rgb(255, 22, 22);
+}
+#beda{
+  align-self: end;
+}
+
+
+/* Main Layout */
+main {
+  padding: 5px;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  background-color: #000000;
+}
+
+/* Content */
+#content {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+  text-align: center;
+  flex-decoration: row;
+}
+/* Card */
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* Featured Image */
+.featured-image {
+  width: 100%;
+  max-height: 700px;
+  max-weight: 200px;
+  object-fit: cover;
+  object-position: center;
+  object-fit: cover;
+}
+
+#content  p{
+  font-size: 20px;
+  color: white;
+  font-family: cinzel;
+}
+
+/* Sidebar */
+aside {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2px;
+  max-height: 700px;
+}
+
+/* Profile Header */
+.profile header {
+  text-align: center;
+}
+
+/* Profile Image */
+.profile img {
+  max-width: 240px;
+  border-radius: 4px:
+}
+section h3{
+  font-family: cinzel;
+  text-align: center; 
+}
+header h3{
+  font-family: cinzel;
+}
+
+/* Headings */
+h2,
+h3 {
+  color: #303030;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive 1200px */
 @media screen and (max-width: 1200px) {
   main {
     flex-flow: column nowrap;
   }
-
   main aside {
     align-self: center;
   }
 }
 
-/* Perangkat dengan lebar layar 768px dan di bawahnya */
+/* Responsive 768px */
 @media screen and (max-width: 768px) {
   nav ul {
     justify-content: center;
   }
-
   main aside {
     align-self: stretch;
+  }
+  .jumbotron p{
+    font-size: 50px;
+
   }
 }
